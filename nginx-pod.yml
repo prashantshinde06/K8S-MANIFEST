@@ -1,0 +1,10 @@
+kind: Pod
+apiversion: v1
+metadata:
+  name: new-nginx-pod   #pod name
+spec:
+  containers:
+    - name: nginx-c
+      image: nginx:latest
+      ports:
+        - containerPort: 80

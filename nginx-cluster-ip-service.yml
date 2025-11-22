@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: cluster-ip-service-for-nginx #given name for cluster ip
+spec:
+  type: ClusterIP
+  selector:
+    app: webapp #cluster-ip name (using same name we bind clusterip service to pod. pod also have same name)
+  ports:
+    - name: http
+      port: 8080        # Service port (inside cluster)
+      targetPort: 80    # Pod container port
