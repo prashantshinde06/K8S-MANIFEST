@@ -9,7 +9,7 @@ spec:
       app: webapp  #replica match to pod label for creation
   template:
     metadata:
-      labels:
+      labels:        #we dont give name for pod it auto generated 
         app: webapp  #pod label
     spec:
       containers:

@@ -1,0 +1,9 @@
+kind: ReplicaSet
+apiVersion: apps/v1
+metadata:
+  name: my-web-app-replicaset
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: web-app
