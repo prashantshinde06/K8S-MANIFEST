@@ -10,4 +10,4 @@ spec:
     - name: http
       port: 8080        # service port
       targetPort: 80    # Pod container port
-      nodePort: 30001   # node port
+      nodePort: 30001   # node port Assigned automatically if not specified

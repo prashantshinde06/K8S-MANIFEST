@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: my-web-app
+  namespace: dev-namespace
 spec:
   replicas: 4
   selector:
@@ -14,6 +15,6 @@ spec:
     spec:
       containers:
         - name: my-app
-          image: pshants/web-app:v1.0.0
+          image: nginx:latest
           ports:
-            - containerPort: 3000
+            - containerPort: 80
